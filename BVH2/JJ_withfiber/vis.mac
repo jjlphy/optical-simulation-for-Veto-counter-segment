@@ -1,0 +1,11 @@
+/vis/open OGL
+/vis/drawVolume
+/vis/viewer/setStyle wireframe
+/vis/viewer/setViewpointThetaPhi 90 180
+/vis/scene/add/trajectories
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/zoom 1.2
+/vis/scene/endOfEventAction accumulate
+/vis/scene/add/hits
+/vis/scene/add/axes 0 0 0 1 m
+/run/beamOn 10

@@ -1,0 +1,29 @@
+# --- Visualization driver 선택 ---
+/vis/open TOOLSSG_QT_GLES
+/vis/viewer/set/viewpointThetaPhi 90 180
+
+# --- 초기화 ---
+/tracking/verbose 0
+/run/verbose 2
+/run/initialize
+
+# --- 장면(scene) 설정 ---
+/vis/scene/create
+/vis/scene/add/volume           # 기하학 볼륨 표시
+/vis/scene/add/extent
+/vis/scene/add/axes 0 0 0 20 cm # (0,0,0) 축 표시
+
+# optical photon 궤적을 cyan 색으로
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set opticalphoton cyan
+
+# --- 자동 업데이트 ---
+/vis/viewer/set/autoRefresh true
+/vis/drawVolume
+
+# --- 궤적 표시 ---
+/vis/scene/add/trajectories
+/tracking/storeTrajectory 1
+
+# --- 필요시 빔온 명령도 여기에 넣을 수 있음 ---
+#/run/beamOn 10

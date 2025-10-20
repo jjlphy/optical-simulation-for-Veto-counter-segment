@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/jj/work/geant4-master/BVH2/JJ_withfiber/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
